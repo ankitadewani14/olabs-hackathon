@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible"content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="video display\css\style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+    <div class="container">
+        <h1>Indian Sign Language Library</h1>
+        <h2 style="align-self: center;">Alphabets and Numbers</h2>
+        <div class="video-container">
+            
+            <div class="vid1">
+            <div class="video"><video src="video display/videos/ISLalpha.mp4" muted></video></div>
+            <h2>Alphabets</h2>
+            </div>
+            <div class="vid2">
+            <div class="video"><video src="video display/videos/ISLnum.mp4" muted></video></div>
+            <h2>Numbers</h2>
+            </div>
+</div>
+
+            <h2 style="align-self: center;">Simple Daily Words</h2>
+        <div class="video-container">
+            <div class="vid1">
+            <div class="video"><video src="video display/videos/HELLO.mp4" muted></video></div>
+            <h2></h2>
+        </div>
+            <div class="vid2">
+            <div class="video"><video src="video display/videos/Thank You.mp4" muted></video></div>
+            <h2></h2>    
+        </div>
+            <div class="vid3">
+            <div class="video"><video src="video display/videos/Please.mp4" muted></video></div>
+            <h2></h2>    
+        </div>
+            <div class="vid4">
+            <div class="video"><video src="video display/videos/water.mp4" muted></video></div>
+            <h2></h2>    
+        </div>
+            <div class="vid4">
+                <div class="video"><video src="video display/videos/FOOD.mp4" muted></video></div>
+                <h2></h2>    
+            </div>
+                <div class="vid4">
+                    <div class="video"><video src="video display/videos/HOME.mp4" muted></video></div>
+                    <h2></h2>    
+                </div>
+                    <div class="vid4">
+                        <div class="video"><video src="video display/videos/BOOK.mp4" muted></video></div>
+                        <h2></h2>    
+                    </div>   
+        </div>
+
+
+        <h2>Conversational Words</h2>
+        <div class="video-container">
+            <div class="vid1">
+            <div class="video"><video src="video display/videos/Actions.mp4" muted></video></div>
+            <h2>Actions</h2>
+        </div>
+            <div class="vid2">
+            <div class="video"><video src="video display/videos/Phrase.mp4" muted></video></div>
+            <h2>Phrase</h2>
+        </div>
+            <div class="vid3">
+            <div class="video"><video src="video display/videos/Pronouns.mp4" muted></video></div>
+            <h2>Pronouns</h2> 
+        </div>
+            <div class="vid4">
+            <div class="video"><video src="video display/videos/Questions.mp4" muted></video></div>
+            <h2>Questions</h2>
+        </div>
+        <div class="vid4">
+            <div class="video"><video src="video display/videos/time.mp4" muted></video></div>
+            <h2>Time</h2>
+        </div>
+        </div>
+
+
+        
+        
+
+        <div class="popup-video">
+            <span>&times;</span>
+            <video src="videos/v1.mp4" muted autoplay controls></video>
+        </div>
+    </div>
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const popup = document.querySelector('.popup-video');
+            const popupVideo = document.querySelector('.popup-video video');
+            const closeBtn = document.querySelector('.popup-video span');
+    
+            document.querySelectorAll('.video-container .video').forEach(vid => {
+                vid.onclick = () => {
+                    if (popup) {
+                        popup.style.display = 'block';
+                        popupVideo.src = vid.querySelector('video').getAttribute('src');
+                    }
+                };
+            });
+    
+            if (closeBtn) {
+                closeBtn.onclick = () => {
+                    popup.style.display = 'none';
+                    popupVideo.src = ''; // Stop video when closing
+                };
+            }
+        });
+    </script>
+    <style>
+        *{
+        margin: 0;
+        padding: 0;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+    .navbar{
+    height: 40px;
+    background-color: black;
+    color:white;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.heading-nav{
+    font-family: cursive;
+    text-align: center;
+}
+.nav-barr{
+    height: 58px;
+    width: 100%;
+    background-color:#133869dd;
+    display: flex;
+    color: rgba(239, 234, 226, 0.87);
+}
+.home{
+    padding: 10px;
+    text-align: center;
+    padding-left: 100px;
+}
+.home i{
+    font-size: 25px;
+
+}
+.home p{
+    font-family:cursive;
+    font-size: px;
+}
+.doctor-consultation{
+    padding: 10px;
+    text-align: center;
+    padding-left: 100px;
+}
+.doctor-consultation i{
+    font-size: 25px;
+
+}
+.doctor-consultation p{
+    font-family:cursive;
+    font-size: 15px;
+}
+.awareness{
+    padding: 10px;
+    text-align: center;
+    padding-left: 100px;
+}
+.awareness i{
+    font-size: 25px;
+
+}
+.awareness p{
+    font-family:cursive;
+    font-size: 15px;
+}
+.chat{
+    padding: 10px;
+    text-align: center;
+    padding-left: 100px;
+}
+.chat i{
+    font-size: 25px;
+}
+.chat p{
+    font-family:cursive;
+    font-size: 15px;
+}
+.ambulance{
+    padding: 10px;
+    text-align: center;
+    padding-left: 100px;
+}
+.ambulance i{
+    font-size: 25px;
+}
+.ambulance p{
+    font-family:cursive;
+    font-size: 15px;
+}
+.medical-record{
+    padding: 10px;
+    text-align: center;
+    padding-left: 100px;
+}
+.medical-record i{
+    font-size: 25px;
+}
+.medical-record p{
+    font-family:cursive;
+    font-size: 15px;
+}
+.accounts{
+    padding: 10px;
+    text-align: center;
+    padding-left: 100px;
+}
+.accounts i{
+    font-size: 25px;
+}
+.accounts p{
+    font-family:cursive;
+    font-size: 15px;
+}
+.nav-bar{
+    background-color: #024751;
+    color: antiquewhite;
+}
+    body{
+      background-color: rgba(239, 234, 226, 0.87);
+    }
+    body, header, main, footer {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Styling footer */
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .footer-content {
+            max-width: 800px; /* Adjust as needed */
+            margin: 0 auto;
+        }
+
+        .footer-content p {
+            margin: 5px 0;
+        }
+
+        .social-links {
+            list-style: none;
+            padding: 0;
+            margin-top: 10px;
+        }
+
+        .social-links li {
+            display: inline;
+            margin-right: 10px;
+        }
+
+        .social-links li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+        }
+ 
+    </style>
+</body>
+</html>
